@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "BaseCoreTextView.h"
 
 @interface ViewController ()
+
+@property (nonatomic,strong) BaseCoreTextView *displayView;
 
 @end
 
@@ -16,6 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _displayView = [[BaseCoreTextView alloc] initWithFrame:CGRectMake(20, 120, 200, 200)];
+    _displayView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:_displayView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

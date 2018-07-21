@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9948732101B5AA005DC6D3 /* BaseCoreTextView.m */; };
+		0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487621020BF9005DC6D3 /* BaseFrameParser.m */; };
+		0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */; };
+		0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */; };
 		E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD37920F79BE2009A9A32 /* AppDelegate.m */; };
 		E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD37C20F79BE2009A9A32 /* ViewController.m */; };
 		E69FD38220F79BE3009A9A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69FD38120F79BE3009A9A32 /* Assets.xcassets */; };
@@ -33,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9948722101B5AA005DC6D3 /* BaseCoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCoreTextView.h; sourceTree = "<group>"; };
+		0A9948732101B5AA005DC6D3 /* BaseCoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCoreTextView.m; sourceTree = "<group>"; };
+		0A99487521020BF9005DC6D3 /* BaseFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFrameParser.h; sourceTree = "<group>"; };
+		0A99487621020BF9005DC6D3 /* BaseFrameParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFrameParser.m; sourceTree = "<group>"; };
+		0A99487821020C0F005DC6D3 /* BaseCoreTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCoreTextData.h; sourceTree = "<group>"; };
+		0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCoreTextData.m; sourceTree = "<group>"; };
+		0A99487B21020C2E005DC6D3 /* BaseFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFrameParserConfig.h; sourceTree = "<group>"; };
+		0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFrameParserConfig.m; sourceTree = "<group>"; };
 		E69FD37520F79BE2009A9A32 /* YLUikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLUikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69FD37820F79BE2009A9A32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E69FD37920F79BE2009A9A32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,9 +86,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9948712101AB43005DC6D3 /* CoreTextBase */ = {
+			isa = PBXGroup;
+			children = (
+				0A9948722101B5AA005DC6D3 /* BaseCoreTextView.h */,
+				0A9948732101B5AA005DC6D3 /* BaseCoreTextView.m */,
+				0A99487521020BF9005DC6D3 /* BaseFrameParser.h */,
+				0A99487621020BF9005DC6D3 /* BaseFrameParser.m */,
+				0A99487821020C0F005DC6D3 /* BaseCoreTextData.h */,
+				0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */,
+				0A99487B21020C2E005DC6D3 /* BaseFrameParserConfig.h */,
+				0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */,
+			);
+			path = CoreTextBase;
+			sourceTree = "<group>";
+		};
 		E69FD36C20F79BE2009A9A32 = {
 			isa = PBXGroup;
 			children = (
+				0A9948712101AB43005DC6D3 /* CoreTextBase */,
 				E69FD37720F79BE2009A9A32 /* YLUikit */,
 				E69FD39020F79BE3009A9A32 /* YLUikitTests */,
 				E69FD39B20F79BE4009A9A32 /* YLUikitUITests */,
@@ -254,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
+				0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */,
 				E69FD38820F79BE3009A9A32 /* main.m in Sources */,
+				0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */,
 				E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */,
+				0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
