@@ -12,6 +12,10 @@
 
 @interface BaseFrameParser : NSObject
 
-+ (BaseCoreTextData *)parseContent:(NSString *)content config:(BaseFrameParserConfig *)config;
++ (BaseCoreTextData *)parseTemplateFile:(NSString *)path config:(BaseFrameParserConfig *)config;
+
++ (BaseCoreTextData *)parseContent:(NSAttributedString *)content config:(BaseFrameParserConfig *)config;
+
++ (NSMutableDictionary *)attributesWithConfig:(BaseFrameParserConfig *)config;
 
 @end

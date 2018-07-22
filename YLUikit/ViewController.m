@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "BaseCoreTextView.h"
+#import "BaseFrameParser.h"
 
 @interface ViewController ()
 
@@ -20,8 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _displayView = [[BaseCoreTextView alloc] initWithFrame:CGRectMake(20, 120, 200, 200)];
+    _displayView = [[BaseCoreTextView alloc] initWithFrame:CGRectMake(20, 20, 250, 200)];
     _displayView.backgroundColor = [UIColor lightGrayColor];
+    
+    BaseFrameParserConfig *config = [[BaseFrameParserConfig alloc] init];
+    config.textColor = [UIColor blackColor];
+    config.width = _displayView.width;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
+    
+    BaseCoreTextData *data = [BaseFrameParser parseTemplateFile:path config:config];
+    
+    _displayView.data = data;
+    _displayView.height = data.height;
     [self.view addSubview:_displayView];
     // Do any additional setup after loading the view, typically from a nib.
 }

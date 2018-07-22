@@ -17,6 +17,12 @@
 		E69FD38820F79BE3009A9A32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD38720F79BE3009A9A32 /* main.m */; };
 		E69FD39220F79BE3009A9A32 /* YLUikitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD39120F79BE3009A9A32 /* YLUikitTests.m */; };
 		E69FD39D20F79BE4009A9A32 /* YLUikitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD39C20F79BE4009A9A32 /* YLUikitUITests.m */; };
+		E69FD3BA210310B1009A9A32 /* UIView+YLFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD3B9210310B1009A9A32 /* UIView+YLFrame.m */; };
+		E69FD3BE21032880009A9A32 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3BD21032880009A9A32 /* content.json */; };
+		E69FD3C32103288A009A9A32 /* red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3BF21032889009A9A32 /* red@2x.png */; };
+		E69FD3C42103288A009A9A32 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C021032889009A9A32 /* coretext-image-2.jpg */; };
+		E69FD3C52103288A009A9A32 /* cursor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C121032889009A9A32 /* cursor@2x.png */; };
+		E69FD3C62103288A009A9A32 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,14 @@
 		E69FD39820F79BE4009A9A32 /* YLUikitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLUikitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69FD39C20F79BE4009A9A32 /* YLUikitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLUikitUITests.m; sourceTree = "<group>"; };
 		E69FD39E20F79BE4009A9A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E69FD3B721030FC9009A9A32 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E69FD3B8210310B1009A9A32 /* UIView+YLFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YLFrame.h"; sourceTree = "<group>"; };
+		E69FD3B9210310B1009A9A32 /* UIView+YLFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLFrame.m"; sourceTree = "<group>"; };
+		E69FD3BD21032880009A9A32 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		E69FD3BF21032889009A9A32 /* red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red@2x.png"; sourceTree = "<group>"; };
+		E69FD3C021032889009A9A32 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
+		E69FD3C121032889009A9A32 /* cursor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cursor@2x.png"; sourceTree = "<group>"; };
+		E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,8 @@
 				0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */,
 				0A99487B21020C2E005DC6D3 /* BaseFrameParserConfig.h */,
 				0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */,
+				E69FD3B8210310B1009A9A32 /* UIView+YLFrame.h */,
+				E69FD3B9210310B1009A9A32 /* UIView+YLFrame.m */,
 			);
 			path = CoreTextBase;
 			sourceTree = "<group>";
@@ -104,6 +120,7 @@
 		E69FD36C20F79BE2009A9A32 = {
 			isa = PBXGroup;
 			children = (
+				E69FD3BC21032875009A9A32 /* resource */,
 				0A9948712101AB43005DC6D3 /* CoreTextBase */,
 				E69FD37720F79BE2009A9A32 /* YLUikit */,
 				E69FD39020F79BE3009A9A32 /* YLUikitTests */,
@@ -132,6 +149,7 @@
 				E69FD38120F79BE3009A9A32 /* Assets.xcassets */,
 				E69FD38620F79BE3009A9A32 /* Info.plist */,
 				E69FD38720F79BE3009A9A32 /* main.m */,
+				E69FD3B721030FC9009A9A32 /* PrefixHeader.pch */,
 			);
 			path = YLUikit;
 			sourceTree = "<group>";
@@ -152,6 +170,18 @@
 				E69FD39E20F79BE4009A9A32 /* Info.plist */,
 			);
 			path = YLUikitUITests;
+			sourceTree = "<group>";
+		};
+		E69FD3BC21032875009A9A32 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				E69FD3BD21032880009A9A32 /* content.json */,
+				E69FD3BF21032889009A9A32 /* red@2x.png */,
+				E69FD3C121032889009A9A32 /* cursor@2x.png */,
+				E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */,
+				E69FD3C021032889009A9A32 /* coretext-image-2.jpg */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +287,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69FD3C42103288A009A9A32 /* coretext-image-2.jpg in Resources */,
+				E69FD3C62103288A009A9A32 /* coretext-image-1.jpg in Resources */,
 				E69FD38220F79BE3009A9A32 /* Assets.xcassets in Resources */,
+				E69FD3C32103288A009A9A32 /* red@2x.png in Resources */,
+				E69FD3C52103288A009A9A32 /* cursor@2x.png in Resources */,
+				E69FD3BE21032880009A9A32 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +324,7 @@
 				0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */,
 				E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */,
 				0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */,
+				E69FD3BA210310B1009A9A32 /* UIView+YLFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +476,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/chenyuliang/Desktop/个人的代码项目/YLUikit/YLUikit/PrefixHeader.pch";
 				INFOPLIST_FILE = YLUikit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +495,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/chenyuliang/Desktop/个人的代码项目/YLUikit/YLUikit/PrefixHeader.pch";
 				INFOPLIST_FILE = YLUikit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

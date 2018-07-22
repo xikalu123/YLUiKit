@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseCoreTextData.h"
 
 @interface BaseCoreTextView : UIView
+
+@property (strong,nonatomic) BaseCoreTextData *data;
 
 @end
