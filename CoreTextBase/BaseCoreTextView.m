@@ -7,6 +7,7 @@
 //
 
 #import "BaseCoreTextView.h"
+#import "TouchCheckUtils.h"
 
 
 @implementation BaseCoreTextView
@@ -18,6 +19,15 @@
     // Drawing code
 }
 */
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGes:)];
+        [self addGestureRecognizer:tapGes];
+        self.userInteractionEnabled = YES;
+    }
+    return self;
+}
 
 - (void)drawRect:(CGRect)rect
 {
@@ -39,6 +49,15 @@
         }
     }
     
+}
+
+- (void)tapGes:(UITapGestureRecognizer *)recognizer{
+    CGPoint point = [recognizer locationInView:self];
+    CoreTextLinkData *link = [TouchCheckUtils touchLinkInView:self atPoint:point data:self.data];
+    if (link) {
+        NSLog(@"hint ==== %@",link.url);
+        return ;
+    }
 }
 
 @end

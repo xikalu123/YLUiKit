@@ -8,6 +8,12 @@
 
 #import "BaseCoreTextData.h"
 
+@implementation CoreTextLinkData
+
+
+@end
+
+
 @implementation CoreTextImageData
 
 

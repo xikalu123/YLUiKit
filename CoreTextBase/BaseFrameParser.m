@@ -74,15 +74,18 @@
 
 + (BaseCoreTextData *)parseTemplateFile:(NSString *)path config:(BaseFrameParserConfig *)config{
     NSMutableArray *imageArray = [NSMutableArray new];
-    NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray];
+    NSMutableArray *linkArray = [NSMutableArray new];
+    NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray linkArray:linkArray];
     BaseCoreTextData *data =  [self parseContent:content config:config];
     data.imageArray = imageArray;
+    data.linkArray = linkArray;
     return data;
 }
 
 + (NSAttributedString *)loadTemplateFile:(NSString *)path
                                   config:(BaseFrameParserConfig *)config
                               imageArray:(NSMutableArray *)imageArray
+                               linkArray:(NSMutableArray *)linkArray
 {
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
@@ -107,6 +110,21 @@
                     //创建空白占位符并且设置它的CTRunDelegate信息
                     NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
+                }
+                else if ([type isEqualToString:@"link"]){
+                    NSUInteger startPos = result.length;
+                    NSMutableAttributedString *as =[self parseAttributedContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                    
+                    NSUInteger length = result.length - startPos;
+                    NSRange linkRange = NSMakeRange(startPos, length);
+                    
+                    CoreTextLinkData *linkData = [[CoreTextLinkData alloc] init];
+                    linkData.title = dict[@"content"];
+                    linkData.url = dict[@"url"];
+                    linkData.range = linkRange;
+                    [linkArray addObject:linkData];
+                    
                 }
             }
         }

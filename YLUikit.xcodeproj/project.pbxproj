@@ -23,6 +23,7 @@
 		E69FD3C42103288A009A9A32 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C021032889009A9A32 /* coretext-image-2.jpg */; };
 		E69FD3C52103288A009A9A32 /* cursor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C121032889009A9A32 /* cursor@2x.png */; };
 		E69FD3C62103288A009A9A32 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */; };
+		E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		E69FD3C021032889009A9A32 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 		E69FD3C121032889009A9A32 /* cursor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cursor@2x.png"; sourceTree = "<group>"; };
 		E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
+		E6D4896D21061DC8009D90DC /* TouchCheckUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchCheckUtils.h; sourceTree = "<group>"; };
+		E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchCheckUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */,
 				E69FD3B8210310B1009A9A32 /* UIView+YLFrame.h */,
 				E69FD3B9210310B1009A9A32 /* UIView+YLFrame.m */,
+				E6D4896D21061DC8009D90DC /* TouchCheckUtils.h */,
+				E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */,
 			);
 			path = CoreTextBase;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
 				0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */,
+				E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */,
 				E69FD38820F79BE3009A9A32 /* main.m in Sources */,
 				0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */,
 				E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */,

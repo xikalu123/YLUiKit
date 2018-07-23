@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@interface CoreTextLinkData : NSObject
+
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *url;
+@property (assign, nonatomic) NSRange range;
+
+@end
+
 @interface CoreTextImageData : NSObject
 
 @property (strong, nonatomic) NSString * name;
@@ -24,5 +32,6 @@
 @property (assign) CGFloat height;
 
 @property (nonatomic, strong) NSArray<__kindof CoreTextImageData *> *imageArray;
+@property (nonatomic, strong) NSArray<__kindof CoreTextLinkData *> *linkArray;
 
 @end
