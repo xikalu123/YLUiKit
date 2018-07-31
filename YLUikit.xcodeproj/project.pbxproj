@@ -497,7 +497,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/chenyuliang/Desktop/个人的代码项目/YLUikit/YLUikit/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = ./YLUikit/PrefixHeader.pch;
 				INFOPLIST_FILE = YLUikit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +516,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/chenyuliang/Desktop/个人的代码项目/YLUikit/YLUikit/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = ./YLUikit/PrefixHeader.pch;
 				INFOPLIST_FILE = YLUikit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
