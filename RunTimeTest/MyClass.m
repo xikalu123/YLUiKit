@@ -8,7 +8,8 @@
 
 #import "MyClass.h"
 
-@interface MyClass(){
+@interface MyClass() <NSCopying>
+{
     NSInteger _instance1;
     NSString *_instance2;
 }

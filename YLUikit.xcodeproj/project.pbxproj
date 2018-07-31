@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A527BEC211014D300A5A241 /* runTimeUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A527BEB211014D300A5A241 /* runTimeUnit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9948732101B5AA005DC6D3 /* BaseCoreTextView.m */; };
 		0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487621020BF9005DC6D3 /* BaseFrameParser.m */; };
 		0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A527BEA211014D300A5A241 /* runTimeUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runTimeUnit.h; sourceTree = "<group>"; };
+		0A527BEB211014D300A5A241 /* runTimeUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runTimeUnit.m; sourceTree = "<group>"; };
 		0A9948722101B5AA005DC6D3 /* BaseCoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCoreTextView.h; sourceTree = "<group>"; };
 		0A9948732101B5AA005DC6D3 /* BaseCoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCoreTextView.m; sourceTree = "<group>"; };
 		0A99487521020BF9005DC6D3 /* BaseFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFrameParser.h; sourceTree = "<group>"; };
@@ -106,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A527BE92110147A00A5A241 /* runtimeUnit */ = {
+			isa = PBXGroup;
+			children = (
+				0A527BEA211014D300A5A241 /* runTimeUnit.h */,
+				0A527BEB211014D300A5A241 /* runTimeUnit.m */,
+			);
+			path = runtimeUnit;
+			sourceTree = "<group>";
+		};
 		0A9948712101AB43005DC6D3 /* CoreTextBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +163,7 @@
 		E69FD37720F79BE2009A9A32 /* YLUikit */ = {
 			isa = PBXGroup;
 			children = (
+				0A527BE92110147A00A5A241 /* runtimeUnit */,
 				E69FD37820F79BE2009A9A32 /* AppDelegate.h */,
 				E69FD37920F79BE2009A9A32 /* AppDelegate.m */,
 				E69FD37B20F79BE2009A9A32 /* ViewController.h */,
@@ -335,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A527BEC211014D300A5A241 /* runTimeUnit.m in Sources */,
 				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
 				E6D48973210F5442009D90DC /* MyClass.m in Sources */,

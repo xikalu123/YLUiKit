@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BaseCoreTextView.h"
 #import "BaseFrameParser.h"
+#import "runTimeUnit.h"
 
 @interface ViewController ()
 
@@ -38,42 +39,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //runtime test
-    [self runtimeTest];
-}
-
-- (void)runtimeTest{
     
-    MyClass *myclass = [MyClass new];
-    unsigned int outCount = 0;
-    Class cls = myclass.class;
-    
-    //类名
-    NSLog(@"class name : %s",class_getName(cls));
-    NSLog(@"============================================");
-    
-    //父类
-    NSLog(@"class name : %s",class_getName(class_getSuperclass(cls)));
-    NSLog(@"============================================");
-    
-    //是否是元累类
-    NSLog(@"Myclass is %@ a meta-class",class_isMetaClass(cls)?@"" : @"not");
-    NSLog(@"============================================");
-    
-    //获取元类
-    Class meta_class = objc_getMetaClass(class_getName(cls));
-    NSLog(@"%s's meta-class is %s",class_getName(cls),class_getName(meta_class));
-    NSLog(@"============================================");
-    
-    //变量实例大小
-    NSLog(@"instance size : %zu",class_getInstanceSize(cls));
-    NSLog(@"============================================");
-
-    
-    
-    
+    runTimeUnit *runUnit = [runTimeUnit new];
+//    [runUnit runTest];
+//    [runUnit creatClassAndObject];
+    [runUnit instanceMethod];
     
 }
 
+- (void)addMethod
+{
+    NSLog(@"run sub method 1");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
