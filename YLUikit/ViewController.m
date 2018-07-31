@@ -43,7 +43,7 @@
     runTimeUnit *runUnit = [runTimeUnit new];
 //    [runUnit runTest];
 //    [runUnit creatClassAndObject];
-    [runUnit instanceMethod];
+    [runUnit ivarAndProperty];
     
 }
 

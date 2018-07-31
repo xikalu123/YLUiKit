@@ -235,6 +235,30 @@ Class objc_getMetaClass ( const char *name );
  */
 
 - (void)ivarAndProperty{
+    //获取属性列表
+   // id myclass = objc_getClass("MyClass");
+   // unsigned int outCount;
+   // objc_property_t *properties = class_copyPropertyList(myclass, &outCount);
+    
+    //查找属性名称
+    const char *property_getName(objc_property_t _Nonnull property) ;
+    
+    //通过给定的名称来在类和协议中获取属性的引用.
+    objc_property_t class_getProperty(Class cls, const char *name);
+    objc_property_t protocol_getProperty(Protocol *proto, const char *name, BOOL isRequiredProperty, BOOL isInstanceProperty);
+    
+    //发掘属性名称和@encode类型字符串
+    const char *property_getAttributes(objc_property_t property);
+    
+    //从一个类中获取它的属性.
+    id myclass = objc_getClass("MyClass");
+    unsigned int outCount;
+    objc_property_t *properties = class_copyPropertyList(myclass, &outCount);
+    
+    for (int i = 0; i< outCount; i++) {
+        objc_property_t property = properties[i];
+        fprintf(stdout, "%s %s\n",property_getName(property),property_getAttributes(property));
+    }
     
 }
 
