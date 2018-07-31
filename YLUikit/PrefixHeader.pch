@@ -11,6 +11,8 @@
 
 #import "UIView+YLFrame.h"
 #import "CoreText/CoreText.h"
+#import "MyClass.h"
+#import <objc/runtime.h>
 #define RGB(A,B,C)  [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1/0]
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

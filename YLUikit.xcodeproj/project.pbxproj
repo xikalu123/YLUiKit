@@ -24,6 +24,7 @@
 		E69FD3C52103288A009A9A32 /* cursor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C121032889009A9A32 /* cursor@2x.png */; };
 		E69FD3C62103288A009A9A32 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */; };
 		E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */; };
+		E6D48973210F5442009D90DC /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D48972210F5442009D90DC /* MyClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		E6D4896D21061DC8009D90DC /* TouchCheckUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchCheckUtils.h; sourceTree = "<group>"; };
 		E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchCheckUtils.m; sourceTree = "<group>"; };
+		E6D48971210F5442009D90DC /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		E6D48972210F5442009D90DC /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 		E69FD36C20F79BE2009A9A32 = {
 			isa = PBXGroup;
 			children = (
+				E6D48970210F5419009D90DC /* RunTimeTest */,
 				E69FD3BC21032875009A9A32 /* resource */,
 				0A9948712101AB43005DC6D3 /* CoreTextBase */,
 				E69FD37720F79BE2009A9A32 /* YLUikit */,
@@ -187,6 +191,15 @@
 				E69FD3C021032889009A9A32 /* coretext-image-2.jpg */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		E6D48970210F5419009D90DC /* RunTimeTest */ = {
+			isa = PBXGroup;
+			children = (
+				E6D48971210F5442009D90DC /* MyClass.h */,
+				E6D48972210F5442009D90DC /* MyClass.m */,
+			);
+			path = RunTimeTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +337,7 @@
 			files = (
 				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
+				E6D48973210F5442009D90DC /* MyClass.m in Sources */,
 				0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */,
 				E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */,
 				E69FD38820F79BE3009A9A32 /* main.m in Sources */,
