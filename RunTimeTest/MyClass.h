@@ -15,6 +15,11 @@
 
 - (void)method1;
 - (void)method2;
+- (void)speak;
 + (void)classMewthod1;
+
+@end
+
+@interface Test : NSObject
 
 @end

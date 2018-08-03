@@ -12,6 +12,9 @@
 		0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487621020BF9005DC6D3 /* BaseFrameParser.m */; };
 		0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */; };
 		0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */; };
+		0AF9713E2112B16A008787A3 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9713D2112B16A008787A3 /* MyView.m */; };
+		0AF971412112C597008787A3 /* MethodForward.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF971402112C597008787A3 /* MethodForward.m */; };
+		0AF971502113FC89008787A3 /* MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9714F2113FC89008787A3 /* MethodSwizzling.m */; };
 		E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD37920F79BE2009A9A32 /* AppDelegate.m */; };
 		E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD37C20F79BE2009A9A32 /* ViewController.m */; };
 		E69FD38220F79BE3009A9A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69FD38120F79BE3009A9A32 /* Assets.xcassets */; };
@@ -56,6 +59,12 @@
 		0A99487921020C0F005DC6D3 /* BaseCoreTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCoreTextData.m; sourceTree = "<group>"; };
 		0A99487B21020C2E005DC6D3 /* BaseFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFrameParserConfig.h; sourceTree = "<group>"; };
 		0A99487C21020C2E005DC6D3 /* BaseFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFrameParserConfig.m; sourceTree = "<group>"; };
+		0AF9713C2112B16A008787A3 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		0AF9713D2112B16A008787A3 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		0AF9713F2112C597008787A3 /* MethodForward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodForward.h; sourceTree = "<group>"; };
+		0AF971402112C597008787A3 /* MethodForward.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodForward.m; sourceTree = "<group>"; };
+		0AF9714E2113FC89008787A3 /* MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodSwizzling.h; sourceTree = "<group>"; };
+		0AF9714F2113FC89008787A3 /* MethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzling.m; sourceTree = "<group>"; };
 		E69FD37520F79BE2009A9A32 /* YLUikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLUikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69FD37820F79BE2009A9A32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E69FD37920F79BE2009A9A32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -211,6 +220,12 @@
 			children = (
 				E6D48971210F5442009D90DC /* MyClass.h */,
 				E6D48972210F5442009D90DC /* MyClass.m */,
+				0AF9713C2112B16A008787A3 /* MyView.h */,
+				0AF9713D2112B16A008787A3 /* MyView.m */,
+				0AF9713F2112C597008787A3 /* MethodForward.h */,
+				0AF971402112C597008787A3 /* MethodForward.m */,
+				0AF9714E2113FC89008787A3 /* MethodSwizzling.h */,
+				0AF9714F2113FC89008787A3 /* MethodSwizzling.m */,
 			);
 			path = RunTimeTest;
 			sourceTree = "<group>";
@@ -351,11 +366,14 @@
 				0A527BEC211014D300A5A241 /* runTimeUnit.m in Sources */,
 				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
+				0AF971412112C597008787A3 /* MethodForward.m in Sources */,
 				E6D48973210F5442009D90DC /* MyClass.m in Sources */,
 				0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */,
+				0AF971502113FC89008787A3 /* MethodSwizzling.m in Sources */,
 				E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */,
 				E69FD38820F79BE3009A9A32 /* main.m in Sources */,
 				0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */,
+				0AF9713E2112B16A008787A3 /* MyView.m in Sources */,
 				E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */,
 				0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */,
 				E69FD3BA210310B1009A9A32 /* UIView+YLFrame.m in Sources */,

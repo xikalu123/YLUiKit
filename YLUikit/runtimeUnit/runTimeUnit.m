@@ -260,6 +260,19 @@ Class objc_getMetaClass ( const char *name );
         fprintf(stdout, "%s %s\n",property_getName(property),property_getAttributes(property));
     }
     
+    
+    [[Test alloc] init];
+}
+
+
+
+- (void)testAssociate{
+    //将一个对象连接到其它对象
+    static char myKey;
+//    objc_setAssociatedObject(self, &myKey, anObject, OBJC_ASSOCIATION_RETAIN);
+    //获取一个新的关联的对象
+//    id anObject = objc_getAssociatedObject(self, &myKey);
+    //使用objc_removeAssociatedObjects函数移除一个关联对象
 }
 
 

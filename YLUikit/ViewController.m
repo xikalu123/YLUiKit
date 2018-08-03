@@ -10,6 +10,8 @@
 #import "BaseCoreTextView.h"
 #import "BaseFrameParser.h"
 #import "runTimeUnit.h"
+#import "MyView.h"
+#import "MethodForward.h"
 
 @interface ViewController ()
 
@@ -40,10 +42,19 @@
     
     //runtime test
     
-    runTimeUnit *runUnit = [runTimeUnit new];
+//    runTimeUnit *runUnit = [runTimeUnit new];
 //    [runUnit runTest];
 //    [runUnit creatClassAndObject];
-    [runUnit ivarAndProperty];
+//    [runUnit ivarAndProperty];
+    
+//    MyView *associateView = [[MyView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+//    associateView.backgroundColor = [UIColor redColor];
+//    [associateView testAssociate];
+//    [self.view addSubview:associateView];
+    
+    MethodForward *method = [[MethodForward alloc] init];
+//    [method testForwardTarget];
+    [method testResolveClass];
     
 }
 
