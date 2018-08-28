@@ -54,3 +54,21 @@ Body里面包含实际的请求数据。
 与request的结构类似，将Request Line换成了Status Line。如图：![image](./HTTPResponse.jpg)
 
 ###Status Line
+Status Line的结构为：
+
+```
+Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
+```
+这里关键在于Status-Line的记忆，以下列出大概的Status码的记忆：  
+ 
+* 1xx: Informational - Request received, continuing process。 
+* 2xx: Success - The action was successfully received, understood, and accepted。 
+* 3xx: Redirection - Further action must be taken in order to complete the request。 
+* 4xx: Client Error - The request contains bad syntax or cannot be fulfilled。
+* 5xx: Server Error - The server failed to fulfill an apparently valid request
+
+###其他Header和Body的信息应该和Request所带的数据一样。
+
+##可以用来携带数据的部分
+
+至此，我们分析一下http请求，哪些可以用来携带业务数据。
