@@ -96,3 +96,55 @@ HTTP是基于**文本解析**的协议，上面提到的空格(0x20)，换行(0x
 对于Header可以先用CRLF分割成一个个键值对，键值对里面的值，也会有编码要求，但是常用的几个Field，比如Host，User-Agent，使用ASCII码字符已经绰绰有余，一般不会对值进一步Encode。
 
 ###深入Body解析
+从header中知道Content-Length之后，读取固定长度的字节流既可以完成body的获取，如果解析读取其中的内容并递交给应用层？HTTP协议本身没有对Body中的内容编码做约束，而是交给协议的使用者决定。甚至可以在body里面存放二进制流，对应的content-type为application/octet-stream  
+
+以AFNetworking为例，当向Server发送数据时候，需要和Server约定好所使用的Content-type。看看使用最频繁的集中Content-Type：
+
+```
+AFJSONRequestSerializer* jsonSerializer = [AFJSONRequestSerializer serializer];
+request = [jsonSerializer requestWithMethod:@"POST" URLString:requestUrl parameters:requestParams error:nil];
+```
+
+* multipart/form-data
+
+```
+request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:requestUrl parameters:requestParams constructingBodyWithBlock:nil error:nil];
+```
+
+* application/x-www-form-urlencoded
+
+```
+request = [self.requestSerializer requestWithMethod:@"POST" URLString:requestUrl parameters:requestParams error:nil];
+```
+
+* application/json
+
+```
+request = [self.requestSerializer requestBySerializingRequest:request withParameters:requestParams error:nil];
+```
+如果Request没有设置Content-type的时候，默认是使用的是application/x-www-form-urlencoded。 这里的urlencode和前面request-line中的是一样，只不过要encode的是body里面的内容。
+
+* 那么什么时候用application/x-www-form-urlencoded，什么时候用multipart/form-data？
+ * 当使用multipart/form-data时，Content-type的完整值为multipart/form-data; boundary=Boundary+2BBBEA582E48968C。**因为multipart把body分成多个块，多个快依赖于boundary值做分割，所以生成的boundary要足够长，长到在字节流出现重复的概率几乎为0，否则会导致错误的传输**以下是AFNetworking生成Boundary的方法：
+ 
+ ```
+ static NSString * AFCreateMultipartFormBoundary() {
+    return [NSString stringWithFormat:@"Boundary+%08X%08X", arc4random(), arc4random()];
+}
+ ```
+ 
+ * 下面是使用multipart/form-data分割，body中具体的数据格式：
+ 
+ ```
+ Boundary+2BBBEA582E48968C
+ Content-Disposition: form-data; name="text1"
+ text
+ Boundary+2BBBEA582E48968C
+ Content-Disposition: form-data; name="text2"
+ another text
+ ```
+ 可以看出body中多处出现了Boundary+2BBBEA582E48968C和Content-Dispostion，这是用来表示分割body的，body的内容不能出现和分割值一样的。  
+ 但是这样会增加body的传输大小。
+ 
+ * 所以传输**大文件**时，使用application/x-www-form-urlencoded，文件长度会变为原来的3倍，所以使用**multipart/form-data**合适。
+ * 传输**少量的键值对**，使用multipart/form-data，由于boundary和Content-Dispostion会带来额外流量，显示不划算，所以使用**application/x-www-form-urlencoded**合适。
