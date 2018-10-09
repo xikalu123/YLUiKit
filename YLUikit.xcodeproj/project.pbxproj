@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4979F5216C8F7300DE5051 /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4979F4216C8F7300DE5051 /* RACViewController.m */; };
+		0A4979F8216C942200DE5051 /* SMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4979F7216C942200DE5051 /* SMStudent.m */; };
+		0A4979FB216C945100DE5051 /* SMCreditStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4979FA216C945100DE5051 /* SMCreditStudent.m */; };
 		0A527BEC211014D300A5A241 /* runTimeUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A527BEB211014D300A5A241 /* runTimeUnit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9948732101B5AA005DC6D3 /* BaseCoreTextView.m */; };
 		0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99487621020BF9005DC6D3 /* BaseFrameParser.m */; };
@@ -49,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4979F3216C8F7300DE5051 /* RACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
+		0A4979F4216C8F7300DE5051 /* RACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
+		0A4979F6216C942200DE5051 /* SMStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMStudent.h; sourceTree = "<group>"; };
+		0A4979F7216C942200DE5051 /* SMStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMStudent.m; sourceTree = "<group>"; };
+		0A4979F9216C945100DE5051 /* SMCreditStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCreditStudent.h; sourceTree = "<group>"; };
+		0A4979FA216C945100DE5051 /* SMCreditStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCreditStudent.m; sourceTree = "<group>"; };
 		0A527BEA211014D300A5A241 /* runTimeUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runTimeUnit.h; sourceTree = "<group>"; };
 		0A527BEB211014D300A5A241 /* runTimeUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runTimeUnit.m; sourceTree = "<group>"; };
 		0A9948722101B5AA005DC6D3 /* BaseCoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCoreTextView.h; sourceTree = "<group>"; };
@@ -118,6 +127,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4979F2216C8F2300DE5051 /* RACStudy */ = {
+			isa = PBXGroup;
+			children = (
+				0A4979F6216C942200DE5051 /* SMStudent.h */,
+				0A4979F7216C942200DE5051 /* SMStudent.m */,
+				0A4979F9216C945100DE5051 /* SMCreditStudent.h */,
+				0A4979FA216C945100DE5051 /* SMCreditStudent.m */,
+			);
+			path = RACStudy;
+			sourceTree = "<group>";
+		};
 		0A527BE92110147A00A5A241 /* runtimeUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +169,7 @@
 		E69FD36C20F79BE2009A9A32 = {
 			isa = PBXGroup;
 			children = (
+				0A4979F2216C8F2300DE5051 /* RACStudy */,
 				E6D48970210F5419009D90DC /* RunTimeTest */,
 				E69FD3BC21032875009A9A32 /* resource */,
 				0A9948712101AB43005DC6D3 /* CoreTextBase */,
@@ -177,6 +198,8 @@
 				E69FD37920F79BE2009A9A32 /* AppDelegate.m */,
 				E69FD37B20F79BE2009A9A32 /* ViewController.h */,
 				E69FD37C20F79BE2009A9A32 /* ViewController.m */,
+				0A4979F3216C8F7300DE5051 /* RACViewController.h */,
+				0A4979F4216C8F7300DE5051 /* RACViewController.m */,
 				E69FD38120F79BE3009A9A32 /* Assets.xcassets */,
 				E69FD38620F79BE3009A9A32 /* Info.plist */,
 				E69FD38720F79BE3009A9A32 /* main.m */,
@@ -367,14 +390,17 @@
 				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
 				0AF971412112C597008787A3 /* MethodForward.m in Sources */,
+				0A4979FB216C945100DE5051 /* SMCreditStudent.m in Sources */,
 				E6D48973210F5442009D90DC /* MyClass.m in Sources */,
 				0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */,
 				0AF971502113FC89008787A3 /* MethodSwizzling.m in Sources */,
+				0A4979F5216C8F7300DE5051 /* RACViewController.m in Sources */,
 				E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */,
 				E69FD38820F79BE3009A9A32 /* main.m in Sources */,
 				0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */,
 				0AF9713E2112B16A008787A3 /* MyView.m in Sources */,
 				E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */,
+				0A4979F8216C942200DE5051 /* SMStudent.m in Sources */,
 				0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */,
 				E69FD3BA210310B1009A9A32 /* UIView+YLFrame.m in Sources */,
 			);
