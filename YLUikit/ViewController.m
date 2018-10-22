@@ -10,14 +10,15 @@
 #import "BaseCoreTextView.h"
 #import "BaseFrameParser.h"
 #import "runTimeUnit.h"
-#import "MyView.h"
 #import "MethodForward.h"
 #import "UIViewController+Tracking.h"
+#import "RACViewController.h"
 
 
 @interface ViewController ()
 
 @property (nonatomic,strong) BaseCoreTextView *displayView;
+@property (nonatomic,strong) UIButton *nextBtn;
 
 @end
 
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
 //    _displayView = [[BaseCoreTextView alloc] initWithFrame:CGRectMake(20, 20, 250, 200)];
 //    _displayView.backgroundColor = [UIColor lightGrayColor];
@@ -58,6 +60,16 @@
 //    [method testForwardTarget];
     [method testResolveClass];
     
+    NSNumber *ss = @(-1000);
+    NSLog(@"sdkks===%lu",(unsigned long)ss.unsignedIntegerValue);
+    
+    _nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _nextBtn.frame = CGRectMake(20, 20 + self.navigationController.navigationBar.height, 100, 100);
+    [_nextBtn setTitle:@"rac学习" forState:UIControlStateNormal];
+    _nextBtn.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:_nextBtn];
+    [_nextBtn addTarget:self action:@selector(jumpRACPage) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,6 +85,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)jumpRACPage
+{
+    RACViewController *racVC = [[RACViewController alloc] init];
+    [self.navigationController pushViewController:racVC animated:YES];
 }
 
 
