@@ -15,6 +15,7 @@
 		0AF9713E2112B16A008787A3 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9713D2112B16A008787A3 /* MyView.m */; };
 		0AF971412112C597008787A3 /* MethodForward.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF971402112C597008787A3 /* MethodForward.m */; };
 		0AF971502113FC89008787A3 /* MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9714F2113FC89008787A3 /* MethodSwizzling.m */; };
+		E675BB1D216BA24B00F36263 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E675BB1C216BA24B00F36263 /* YYMemoryCache.m */; };
 		E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD37920F79BE2009A9A32 /* AppDelegate.m */; };
 		E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69FD37C20F79BE2009A9A32 /* ViewController.m */; };
 		E69FD38220F79BE3009A9A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69FD38120F79BE3009A9A32 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		E69FD3C62103288A009A9A32 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69FD3C22103288A009A9A32 /* coretext-image-1.jpg */; };
 		E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */; };
 		E6D48973210F5442009D90DC /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D48972210F5442009D90DC /* MyClass.m */; };
+		E6EE6B9621206B9600C4401B /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EE6B9521206B9600C4401B /* UIViewController+Tracking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		0AF971402112C597008787A3 /* MethodForward.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodForward.m; sourceTree = "<group>"; };
 		0AF9714E2113FC89008787A3 /* MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodSwizzling.h; sourceTree = "<group>"; };
 		0AF9714F2113FC89008787A3 /* MethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzling.m; sourceTree = "<group>"; };
+		E675BB1B216BA24B00F36263 /* YYMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		E675BB1C216BA24B00F36263 /* YYMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
 		E69FD37520F79BE2009A9A32 /* YLUikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLUikit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69FD37820F79BE2009A9A32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E69FD37920F79BE2009A9A32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		E6D4896E21061DC8009D90DC /* TouchCheckUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchCheckUtils.m; sourceTree = "<group>"; };
 		E6D48971210F5442009D90DC /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
 		E6D48972210F5442009D90DC /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		E6EE6B9421206B9600C4401B /* UIViewController+Tracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
+		E6EE6B9521206B9600C4401B /* UIViewController+Tracking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +152,19 @@
 			path = CoreTextBase;
 			sourceTree = "<group>";
 		};
+		E675BB1A216BA20F00F36263 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				E675BB1B216BA24B00F36263 /* YYMemoryCache.h */,
+				E675BB1C216BA24B00F36263 /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
 		E69FD36C20F79BE2009A9A32 = {
 			isa = PBXGroup;
 			children = (
+				E675BB1A216BA20F00F36263 /* YYCache */,
 				E6D48970210F5419009D90DC /* RunTimeTest */,
 				E69FD3BC21032875009A9A32 /* resource */,
 				0A9948712101AB43005DC6D3 /* CoreTextBase */,
@@ -226,6 +242,8 @@
 				0AF971402112C597008787A3 /* MethodForward.m */,
 				0AF9714E2113FC89008787A3 /* MethodSwizzling.h */,
 				0AF9714F2113FC89008787A3 /* MethodSwizzling.m */,
+				E6EE6B9421206B9600C4401B /* UIViewController+Tracking.h */,
+				E6EE6B9521206B9600C4401B /* UIViewController+Tracking.m */,
 			);
 			path = RunTimeTest;
 			sourceTree = "<group>";
@@ -368,9 +386,11 @@
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
 				0AF971412112C597008787A3 /* MethodForward.m in Sources */,
 				E6D48973210F5442009D90DC /* MyClass.m in Sources */,
+				E6EE6B9621206B9600C4401B /* UIViewController+Tracking.m in Sources */,
 				0A9948742101B5AA005DC6D3 /* BaseCoreTextView.m in Sources */,
 				0AF971502113FC89008787A3 /* MethodSwizzling.m in Sources */,
 				E6D4896F21061DC8009D90DC /* TouchCheckUtils.m in Sources */,
+				E675BB1D216BA24B00F36263 /* YYMemoryCache.m in Sources */,
 				E69FD38820F79BE3009A9A32 /* main.m in Sources */,
 				0A99487D21020C2E005DC6D3 /* BaseFrameParserConfig.m in Sources */,
 				0AF9713E2112B16A008787A3 /* MyView.m in Sources */,

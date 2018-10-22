@@ -8,6 +8,7 @@
 
 #import "MethodForward.h"
 
+
 @implementation MethodReceiver
 
 - (void)method2

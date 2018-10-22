@@ -12,6 +12,8 @@
 #import "runTimeUnit.h"
 #import "MyView.h"
 #import "MethodForward.h"
+#import "UIViewController+Tracking.h"
+
 
 @interface ViewController ()
 
@@ -56,6 +58,11 @@
 //    [method testForwardTarget];
     [method testResolveClass];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)addMethod
