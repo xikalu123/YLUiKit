@@ -18,13 +18,37 @@
 
 @property (readonly) NSUInteger totalCost;
 
+@property NSUInteger countLimit;
+
+@property NSUInteger costLimit;
+
+@property NSTimeInterval ageLimit;
+
+@property NSTimeInterval autoTrimInterval;
+
+@property BOOL shouldRemoveAllObjectsOnMemoryWarning;
+
+@property BOOL shouldRemoveAllObjectsWhenEnteringBackground;
+
+@property BOOL releaseAsynchronously;
+
+@property BOOL releaseOnMainThread;
+
+@property (nonatomic, copy) void (^didReciveMemoryWarningBlock)(YYMemoryCache *cache);
+
+@property (nonatomic, copy) void (^didEnterBackgroundBlock)(YYMemoryCache *cache);
+
 #pragma mark - Limit
 
 #pragma mark - Access Methods
 
+- (BOOL)containsObjectForKey:(id)key;
+
 - (nullable id)objectForKey:(id)key;
 
 - (void)setObject:(nullable id)object forKey:(id)key;
+
+- (void)setObject:(nullable id)object forKey:(id)key withCost:(NSUInteger)cost;
 
 - (void)removeObjectForKey:(id)key;
 
