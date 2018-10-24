@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A099E8E21808F4A006F51E2 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A099E8D21808F4A006F51E2 /* YYKVStorage.m */; };
+		0A099E9221809695006F51E2 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A099E9021809695006F51E2 /* sqlite3.c */; };
 		0A4979F5216C8F7300DE5051 /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4979F4216C8F7300DE5051 /* RACViewController.m */; };
 		0A4979F8216C942200DE5051 /* SMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4979F7216C942200DE5051 /* SMStudent.m */; };
 		0A4979FB216C945100DE5051 /* SMCreditStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4979FA216C945100DE5051 /* SMCreditStudent.m */; };
@@ -54,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A099E8C21808F49006F51E2 /* YYKVStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		0A099E8D21808F4A006F51E2 /* YYKVStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		0A099E9021809695006F51E2 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		0A099E9121809695006F51E2 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		0A4979F3216C8F7300DE5051 /* RACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
 		0A4979F4216C8F7300DE5051 /* RACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
 		0A4979F6216C942200DE5051 /* SMStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMStudent.h; sourceTree = "<group>"; };
@@ -133,6 +139,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A099E8F21809695006F51E2 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				0A099E9021809695006F51E2 /* sqlite3.c */,
+				0A099E9121809695006F51E2 /* sqlite3.h */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
 		0A4979F2216C8F2300DE5051 /* RACStudy */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +190,11 @@
 		E675BB1A216BA20F00F36263 /* YYCache */ = {
 			isa = PBXGroup;
 			children = (
+				0A099E8F21809695006F51E2 /* SQLite */,
 				E675BB1B216BA24B00F36263 /* YYMemoryCache.h */,
 				E675BB1C216BA24B00F36263 /* YYMemoryCache.m */,
+				0A099E8C21808F49006F51E2 /* YYKVStorage.h */,
+				0A099E8D21808F4A006F51E2 /* YYKVStorage.m */,
 			);
 			path = YYCache;
 			sourceTree = "<group>";
@@ -408,6 +426,7 @@
 				0A99487A21020C0F005DC6D3 /* BaseCoreTextData.m in Sources */,
 				E69FD37D20F79BE2009A9A32 /* ViewController.m in Sources */,
 				0AF971412112C597008787A3 /* MethodForward.m in Sources */,
+				0A099E8E21808F4A006F51E2 /* YYKVStorage.m in Sources */,
 				0A4979FB216C945100DE5051 /* SMCreditStudent.m in Sources */,
 				E6D48973210F5442009D90DC /* MyClass.m in Sources */,
 				E6EE6B9621206B9600C4401B /* UIViewController+Tracking.m in Sources */,
@@ -422,6 +441,7 @@
 				E69FD37A20F79BE2009A9A32 /* AppDelegate.m in Sources */,
 				0A4979F8216C942200DE5051 /* SMStudent.m in Sources */,
 				0A99487721020BF9005DC6D3 /* BaseFrameParser.m in Sources */,
+				0A099E9221809695006F51E2 /* sqlite3.c in Sources */,
 				E69FD3BA210310B1009A9A32 /* UIView+YLFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
